@@ -1,0 +1,37 @@
+import pytest
+
+##rectangle perimeter function
+def perimRect(length,width):
+    """Compute permiter of a reclangle"""
+    return (2*length+2*width)
+
+def test_perimRect_1():
+   assert perimRect(4,5)==18
+
+def test_perimRect_2():
+   assert perimRect(7,3)==20
+
+def test_perimRect_3():
+   assert perimRect(2.1,4.3)==pytest.approx(12.8)
+
+
+
+print(perimRect(4,5))
+
+
+##triangle area function
+def areaTriangle(base,height):
+    """Compute the area of a triangle"""
+    return (.5*base*height)
+
+def test_areaTriangle_1():
+    assert areaTriangle(4,5) == 10
+
+def test_areaTriangle_2():
+    assert areaTriangle(5,5)==12.5
+
+def test_areaTriangle_3():
+    assert areaTriangle(3,10)==15
+
+print(areaTriangle(5,5))
+
